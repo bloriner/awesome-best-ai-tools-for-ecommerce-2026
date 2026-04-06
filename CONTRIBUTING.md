@@ -4,53 +4,61 @@ Thanks for contributing to `awesome-best-ai-tools-for-ecommerce-2026`.
 
 ## Submission Rules
 
-To keep this list useful, every submission must meet all of these rules:
+Before opening a pull request, make sure every proposed tool passes all of these checks:
 
-1. The project must have a public `github.com` repository URL.
-2. The project must be usable as open source software, not a SaaS-only product listing.
-3. The submission must explain why the repo is relevant to ecommerce.
-4. The submission must include:
-   - GitHub URL
-   - Stars count
-   - Primary language
-   - License
-   - Recent GitHub activity date
-   - Best-for use case
-5. If a category is weak, do not pad it with unrelated repos. Document the gap honestly.
+1. It must have a public `github.com` repository.
+2. It must be relevant to ecommerce workflows such as recommendations, search, catalog enrichment, shopping feeds, conversational commerce, forecasting, pricing, or merchandising.
+3. It must not be a proprietary SaaS listing.
+4. It must include a real open-source or source-available codebase, not only documentation or marketing pages.
+5. It must include enough GitHub metadata to document stars, primary language, license, and recent activity.
 
-## Preferred Format
+## Required Format
 
-Use this format in your pull request:
+For each new entry, include:
 
-```md
-#### [Tool Name](https://github.com/owner/repo)
-> **Description:** Short summary of what it does, why it matters for ecommerce, and key GitHub metadata.
-
-- **GitHub:** [github.com/owner/repo](https://github.com/owner/repo)
-- **Stars:** 1234 ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2026-01-01
-- **Category:** tag1, tag2
-- **Best for:** specific ecommerce use case
-```
+- Repository name
+- Public GitHub URL
+- Short explanation of why it is useful for ecommerce
+- Stars
+- Primary language
+- License
+- Last commit date or latest visible GitHub activity date
+- Best-for use case
 
 ## Pull Request Checklist
 
-- Verify the repository link works.
-- Verify the tool is still public on GitHub.
-- Verify the license from GitHub.
-- Verify the metadata is current.
-- Keep descriptions specific and concise.
+- I verified the tool is hosted on `github.com`
+- I verified the repository is public
+- I verified the project is relevant to ecommerce AI
+- I did not submit a proprietary SaaS product
+- I included stars, language, license, and recent GitHub activity
+- I kept the description specific and factual
 
-## What Will Be Rejected
+## Quality Bar
 
-- Tools without a GitHub repository
-- Closed-source SaaS products
-- Duplicate entries
-- Generic AI repos with no meaningful ecommerce use case
-- Marketing copy with no technical substance
+This list prefers:
 
-## License
+- Repositories with practical ecommerce use
+- Projects with active maintenance
+- Clear README documentation
+- Strong GitHub activity or community traction
 
-By contributing, you agree that your contributions will be licensed under the MIT License used by this repository.
+This list avoids:
+
+- Thin wrappers around paid APIs
+- Repositories with no usable code
+- Generic AI repos with no plausible ecommerce application
+- Duplicate tools in multiple categories without a clear reason
+
+## Gap Policy
+
+If a category has fewer than 5 strong repositories, keep the category honest and document the gap. Do not pad the list with weak or unrelated repositories just to reach a count target.
+
+## Reporting Issues
+
+Open an issue if:
+
+- A repository becomes private, archived, or deleted
+- A license changes materially
+- A listed tool is no longer meaningfully relevant to ecommerce
+- Metadata in the README becomes outdated or incorrect

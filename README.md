@@ -1,17 +1,17 @@
 ---
 title: "best-ai-tools-for-ecommerce-2026"
-description: "Best AI tools for ecommerce in 2026: a curated open source GitHub list for search, recommendations, chat, catalog enrichment, and demand forecasting."
+description: "Curated list of the best AI tools for ecommerce in 2026, featuring open-source GitHub repos for recommendations, search, chat, feeds, and forecasting."
 icon: 📋
-category: artificial-intelligence
+category: awesome-list
 ---
 
-# Best AI Tools for Ecommerce in 2026
+# Best AI Tools for Ecommerce 2026
 
 [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@main/media/badge.svg)](https://github.com/sindresorhus/awesome)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Topics](https://img.shields.io/github/stars/GagnDeep/awesome-best-ai-tools-for-ecommerce-2026?style=social)
 
-> This curated list of the best AI tools for ecommerce in 2026 focuses only on open source projects that exist as public GitHub repositories. It is built for teams that want recommendation engines, product search, support automation, visual catalog tooling, and forecasting stacks they can inspect, self-host, extend, and benchmark without depending on closed SaaS lock-in.
+> Best AI tools for ecommerce 2026 are still scattered across recommender-system repos, vector search engines, forecasting libraries, and self-hosted commerce copilots. This list curates public GitHub repositories only, with no proprietary SaaS listings, so merchants and developers can evaluate real open-source building blocks for discovery, merchandising, support, and demand planning.
 
 ## Table of Contents
 - [TL;DR](#tldr)
@@ -22,396 +22,400 @@ category: artificial-intelligence
 - [License](#license)
 
 ## TL;DR
-- `gorse`, `metarank`, and `recommenders-team/recommenders` are the strongest open source starting points for ecommerce ranking and recommendation work.
-- `Meilisearch`, `Typesense`, `OpenSearch`, `Vespa`, and `Qdrant` cover most search, hybrid retrieval, and vector discovery use cases for product catalogs.
-- `Rasa`, `Flowise`, `Langflow`, `ChatFAQ`, and `Libre Chat` are practical building blocks for conversational commerce and support automation.
-- `docTR`, `clip-retrieval`, `Marqo`, and `Label Studio` help with product imagery, OCR, multimodal search, and annotation workflows.
-- `NeuralForecast`, `Darts`, `Prophet`, `NeuralProphet`, and `GluonTS` are strong open source options for demand planning and inventory-aware forecasting.
+- **Best open-source recommender engine:** [Gorse](https://github.com/gorse-io/gorse) for production recommendations with APIs and a dashboard.
+- **Best search stack for semantic catalog discovery:** [Qdrant](https://github.com/qdrant/qdrant), [Typesense](https://github.com/typesense/typesense), and [OpenSearch](https://github.com/opensearch-project/OpenSearch).
+- **Best open-source shopping feed optimization tools:** [FeedGen](https://github.com/google-marketing-solutions/feedgen) and [FeedX](https://github.com/google-marketing-solutions/feedx).
+- **Best self-hosted AI workspace for ecommerce support teams:** [Dify](https://github.com/langgenius/dify), [Flowise](https://github.com/FlowiseAI/Flowise), and [Open WebUI](https://github.com/open-webui/open-webui).
+- **Best forecasting libraries for inventory and demand planning:** [NeuralForecast](https://github.com/Nixtla/neuralforecast), [Darts](https://github.com/unit8co/darts), and [MLForecast](https://github.com/Nixtla/mlforecast).
 
 ## Why This List
-Open source AI tools matter in ecommerce because search quality, ranking logic, customer support flows, and forecasting models directly affect revenue. A strong open source stack gives teams control over data, deployment, observability, and cost structure while making it easier to tune the best AI tools for ecommerce in 2026 around real catalog, traffic, and fulfillment constraints.
+Most searches for the best AI tools for ecommerce 2026 surface closed SaaS products, affiliate roundups, or vague "AI for retail" claims. This repository takes the opposite approach: every entry is a public GitHub repository, every entry is relevant to ecommerce operations, and weak categories are treated honestly instead of padded.
+
+Open source matters here because ecommerce teams need control over product data, search quality, recommendation logic, customer-service workflows, and forecasting pipelines. If a category had too few strong repos, I treated it as a gap rather than inventing depth that is not there.
 
 ## Open Source Tools
 
-### Recommendation and Ranking
+### Search, Discovery, and Recommendations
 
 #### [Gorse](https://github.com/gorse-io/gorse)
-> **Description:** Gorse is an AI-powered recommender system written in Go and built for fast integration into online services. Its README highlights support for collaborative filtering, item-to-item and user-to-user recommendations, multimodal embeddings, dashboard-based pipeline management, and REST APIs for CRUD and recommendation requests. That makes it a strong fit for ecommerce teams building "related products", "you may also like", or homepage personalization with a deployable service instead of a notebook-only library. GitHub shows roughly 9.6k stars, Go as the main language, Apache-2.0 licensing, and recent commit activity on Mar 7, 2026.
+> **Description:** Gorse describes itself as an AI-powered open-source recommender system that can be integrated into a wide variety of online services. Its README emphasizes multi-source recommendations, multimodal content support through embeddings, classical and LLM-based recommenders, REST APIs, and a GUI dashboard for editing and monitoring the recommendation pipeline. That makes it one of the most ecommerce-ready repositories in this list for "similar products," home-page ranking, and personalized collections. GitHub metadata snapshot: 9,201 stars, primary language Go, Apache-2.0 license, last commit 2025-11-15.
 
 - **GitHub:** [github.com/gorse-io/gorse](https://github.com/gorse-io/gorse)
-- **Stars:** 9.6k ⭐
+- **Stars:** 9201 ⭐
 - **Language:** Go
 - **License:** Apache-2.0
-- **Last Commit:** 2026-03-07
-- **Category:** recommendation, personalization
-- **Best for:** real-time product recommendations
-
----
-
-#### [Metarank](https://github.com/metarank/metarank)
-> **Description:** Metarank is a low-code open source ranking service designed for personalized search and recommendations. Its README explicitly positions it for listings, search results, recommendations, and CTR optimization with customer signals such as clicks and purchases. It supports learning-to-rank, semantic or neural search, collaborative filtering recommendations, feature generation, A/B testing, and stateless deployment with Redis-backed state. For ecommerce teams, that is useful when a plain search engine is not enough and business wants reranking based on behavior. GitHub shows about 2.2k stars, Scala as the main language, Apache-2.0 licensing, and repository activity updated Sep 24, 2025.
-
-- **GitHub:** [github.com/metarank/metarank](https://github.com/metarank/metarank)
-- **Stars:** 2.2k ⭐
-- **Language:** Scala
-- **License:** Apache-2.0
-- **Last Commit:** 2025-09-24
-- **Category:** ranking, search-personalization
-- **Best for:** personalized product listing reranking
-
----
-
-#### [RecBole](https://github.com/RUCAIBox/RecBole)
-> **Description:** RecBole is a comprehensive recommendation research and development framework built on Python and PyTorch. The README notes support for 94 recommendation algorithms across general, sequential, context-aware, and knowledge-based recommendation, plus 44 benchmark datasets and a unified data format. That breadth makes it valuable when ecommerce teams want to benchmark models before productionizing them in a separate serving layer. It is more of a toolkit than a drop-in service, but it is unusually broad. GitHub shows roughly 4.3k stars, Python as the primary language, MIT licensing, and recent commit history on Feb 24, 2025.
-
-- **GitHub:** [github.com/RUCAIBox/RecBole](https://github.com/RUCAIBox/RecBole)
-- **Stars:** 4.3k ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-02-24
-- **Category:** recommendation, experimentation
-- **Best for:** benchmarking ecommerce recommendation algorithms
+- **Last Commit:** 2025-11-15
+- **Category:** recommendations, personalization, ranking
+- **Best for:** production-grade product recommendations
 
 ---
 
 #### [Recommenders](https://github.com/recommenders-team/recommenders)
-> **Description:** The Recommenders project focuses on best practices for recommendation systems rather than a single serving runtime. Its README emphasizes notebooks, examples, data preparation, model training, evaluation, and production-minded guidance across classic and modern recommenders. That makes it useful for ecommerce engineering and data teams that need reproducible reference implementations for ranking, collaborative filtering, retrieval, and evaluation workflows before choosing a serving architecture. It is backed by LF AI and Data, which helps with trust and longevity. GitHub shows around 21.3k stars, Python as the main language, MIT licensing, and the latest visible GitHub release on Dec 24, 2024.
+> **Description:** Recommenders is a Linux Foundation AI & Data project focused on best practices for building recommendation systems. The README centers on the full recommender lifecycle: preparing data, training classical and deep models, evaluating offline metrics, tuning hyperparameters, and operationalizing systems in production. For ecommerce teams, it is especially useful as a reference implementation library when building "you may also like," session-aware ranking, or marketplace recommendations. It is less turnkey than Gorse, but much broader as an engineering and experimentation toolkit. GitHub metadata snapshot: 21,194 stars, primary language Python, MIT license, last commit 2025-11-10.
 
 - **GitHub:** [github.com/recommenders-team/recommenders](https://github.com/recommenders-team/recommenders)
-- **Stars:** 21.3k ⭐
+- **Stars:** 21194 ⭐
 - **Language:** Python
 - **License:** MIT
-- **Last Commit:** 2024-12-24
-- **Category:** recommendation, best-practices
-- **Best for:** reference implementations and evaluation workflows
+- **Last Commit:** 2025-11-10
+- **Category:** recommendation-engine, experimentation, notebooks
+- **Best for:** teams prototyping recommender models before productionization
 
 ---
 
 #### [LensKit for Python](https://github.com/lenskit/lkpy)
-> **Description:** LensKit is a Python toolkit for studying, training, and evaluating recommender algorithms in a flexible way. The README presents it as a research and education oriented successor to the original Java LensKit project, with modern packaging, experiment support, and a focus on reproducible recommender workflows. It is a good fit for ecommerce teams that want to prototype recommendation logic, offline evaluation, and candidate-generation experiments before turning ideas into services. GitHub shows about 300 stars, Python as the main language, MIT licensing, and repository activity updated Nov 25, 2025.
+> **Description:** LensKit for Python presents itself as a toolkit for experimenting with and studying recommender systems. Its README highlights flexible support for training, running, and evaluating recommender algorithms, with a strong focus on research and education rather than polished SaaS workflows. That still makes it highly relevant for ecommerce engineers validating ranking logic, testing recommendation quality, or benchmarking catalog-discovery models before deployment. It is a lighter-weight framework than full end-to-end commerce infrastructure, but it remains a credible open-source component in the stack. GitHub metadata snapshot: 300 stars, primary language Python, MIT license, last commit 2025-11-25.
 
 - **GitHub:** [github.com/lenskit/lkpy](https://github.com/lenskit/lkpy)
 - **Stars:** 300 ⭐
 - **Language:** Python
 - **License:** MIT
 - **Last Commit:** 2025-11-25
-- **Category:** recommendation, offline-evaluation
-- **Best for:** recommender experimentation and offline tests
-
----
-
-### Search, Discovery, and Vector Retrieval
-
-#### [Meilisearch](https://github.com/meilisearch/meilisearch)
-> **Description:** Meilisearch is a fast, typo-tolerant search engine that is easy to integrate into applications and storefronts. Its GitHub organization describes it as lightweight and developer friendly, while the ecosystem includes an ecommerce demo covering faceted search, filtering, sorting, and AI-powered image search. For ecommerce, Meilisearch is especially attractive when the priority is fast implementation, relevant product search, and clean API ergonomics without operating a large search cluster. GitHub shows roughly 55.4k stars, Rust as the primary language, MIT licensing, and repository activity updated Jan 14, 2026.
-
-- **GitHub:** [github.com/meilisearch/meilisearch](https://github.com/meilisearch/meilisearch)
-- **Stars:** 55.4k ⭐
-- **Language:** Rust
-- **License:** MIT
-- **Last Commit:** 2026-01-14
-- **Category:** search, product-discovery
-- **Best for:** fast storefront search and faceting
-
----
-
-#### [Typesense](https://github.com/typesense/typesense)
-> **Description:** Typesense is an open source search engine built around fast, typo-tolerant, in-memory search. The GitHub organization positions it as an easier-to-use alternative to heavier search stacks and as an open alternative to Algolia-style developer search experiences. For ecommerce teams, it fits product search, category landing pages, autosuggest, merchandising filters, and hybrid retrieval when low operational friction matters. Its ecosystem also includes adapters for rich frontend experiences. GitHub shows about 25k stars, C++ as the primary language, GPL-3.0 licensing, and repository activity updated Jan 12, 2026.
-
-- **GitHub:** [github.com/typesense/typesense](https://github.com/typesense/typesense)
-- **Stars:** 25k ⭐
-- **Language:** C++
-- **License:** GPL-3.0
-- **Last Commit:** 2026-01-12
-- **Category:** search, faceted-search
-- **Best for:** typo-tolerant product search
-
----
-
-#### [OpenSearch](https://github.com/opensearch-project/OpenSearch)
-> **Description:** OpenSearch is a distributed search and analytics engine suited to enterprise-scale workloads. Its README describes it as an enterprise-grade suite that brings order to unstructured data at scale, while the GitHub organization highlights application search as a core use case. In ecommerce, OpenSearch is a strong candidate for large catalogs, multi-index architectures, log analytics tied to search relevance, and teams that need a mature distributed platform with a broad ecosystem. GitHub shows roughly 12.1k stars, Java as the primary language, Apache-2.0 licensing, and repository activity updated Jan 9, 2026.
-
-- **GitHub:** [github.com/opensearch-project/OpenSearch](https://github.com/opensearch-project/OpenSearch)
-- **Stars:** 12.1k ⭐
-- **Language:** Java
-- **License:** Apache-2.0
-- **Last Commit:** 2026-01-09
-- **Category:** search, distributed-search
-- **Best for:** large-scale catalog search infrastructure
-
----
-
-#### [Vespa](https://github.com/vespa-engine/vespa)
-> **Description:** Vespa is built for low-latency computation over large structured, text, and vector data. Its GitHub organization explicitly calls out real-time recommendation, personalization, targeting, and vector search, which maps very directly to ecommerce ranking and discovery workloads. Vespa is more infrastructure-heavy than lightweight search engines, but it is powerful for organizations that want serving, ranking, retrieval, and online feature computation in one platform. GitHub shows about 6.6k to 6.7k stars, Java as the main language, Apache-2.0 licensing, and repository activity updated Dec 1, 2025.
-
-- **GitHub:** [github.com/vespa-engine/vespa](https://github.com/vespa-engine/vespa)
-- **Stars:** 6.7k ⭐
-- **Language:** Java
-- **License:** Apache-2.0
-- **Last Commit:** 2025-12-01
-- **Category:** vector-search, ranking
-- **Best for:** hybrid retrieval and real-time ranking
+- **Category:** recommender-systems, evaluation, research
+- **Best for:** offline recommendation experiments and benchmarking
 
 ---
 
 #### [Qdrant](https://github.com/qdrant/qdrant)
-> **Description:** Qdrant is a high-performance vector database and vector search engine focused on similarity search with payload-aware filtering. The README explicitly mentions matching, recommending, faceted search, similar image search, semantic text search, and even ecommerce product categorization as practical applications. That makes it one of the clearest fits on this list for modern ecommerce retrieval, where dense vectors, sparse vectors, and metadata filters all matter. GitHub shows roughly 28.7k stars, Rust as the main language, Apache-2.0 licensing, and repository activity updated Feb 8, 2026.
+> **Description:** Qdrant is a vector database and vector search engine designed for similarity search with filtering and payload support. Its README explicitly calls out use cases such as semantic search, similar image search, recommendations, and even ecommerce product categorization. For ecommerce stacks, that combination matters: you can store embeddings for products, queries, or user events, then layer business filters like price, category, locale, or stock status over semantic retrieval. It is one of the strongest open-source building blocks for modern AI-powered catalog discovery. GitHub metadata snapshot: 28,659 stars, primary language Rust, Apache-2.0 license, last commit 2026-02-08.
 
 - **GitHub:** [github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)
-- **Stars:** 28.7k ⭐
+- **Stars:** 28659 ⭐
 - **Language:** Rust
 - **License:** Apache-2.0
 - **Last Commit:** 2026-02-08
-- **Category:** vector-database, semantic-search
-- **Best for:** embedding-powered product retrieval
+- **Category:** vector-search, semantic-search, catalog-discovery
+- **Best for:** semantic product search and similar-item retrieval
 
 ---
 
-### Catalog Enrichment, Vision, and Annotation
+#### [OpenSearch](https://github.com/opensearch-project/OpenSearch)
+> **Description:** OpenSearch is a distributed search and analytics engine with strong ecosystem maturity and an Apache-2.0 license. While it is broader than ecommerce, its README and GitHub topics make it a practical foundation for search, analytics, and relevance tuning. For ecommerce teams, OpenSearch is particularly valuable when AI ranking must coexist with traditional filters, facets, keyword search, analytics, and operational reliability. It is not a recommender system by itself, but it works well as the core index for hybrid lexical-plus-AI shopping experiences. GitHub metadata snapshot: 12,171 stars, primary language Java, Apache-2.0 license, last commit 2026-01-09.
+
+- **GitHub:** [github.com/opensearch-project/OpenSearch](https://github.com/opensearch-project/OpenSearch)
+- **Stars:** 12171 ⭐
+- **Language:** Java
+- **License:** Apache-2.0
+- **Last Commit:** 2026-01-09
+- **Category:** search-engine, analytics, hybrid-search
+- **Best for:** large-scale ecommerce search infrastructure
+
+---
+
+#### [Typesense](https://github.com/typesense/typesense)
+> **Description:** Typesense positions itself as an open-source alternative to Algolia and Pinecone, with typo-tolerant, in-memory fuzzy search and newer natural-language search examples. That makes it a strong fit for ecommerce search bars, category pages, autocomplete, and shopper-friendly merchandising experiences where speed and relevance matter more than heavyweight cluster complexity. Its GitHub organization page also shows active work around LLM-assisted search showcases, which helps bridge classic site search and semantic retrieval. GitHub metadata snapshot: 25,011 stars, primary language C++, GPL-3.0 license, last commit 2026-01-12.
+
+- **GitHub:** [github.com/typesense/typesense](https://github.com/typesense/typesense)
+- **Stars:** 25011 ⭐
+- **Language:** C++
+- **License:** GPL-3.0
+- **Last Commit:** 2026-01-12
+- **Category:** site-search, autocomplete, relevance
+- **Best for:** fast shopper-facing storefront search
+
+---
 
 #### [Marqo](https://github.com/marqo-ai/marqo)
-> **Description:** Marqo is a unified embedding generation and search engine built for multimodal retrieval. The GitHub organization describes it as tensor search for humans and a single system for generating embeddings and searching over them. In ecommerce, that matters for similar product search, image-led browsing, multimodal discovery, and semantic retrieval over product titles, descriptions, and visual assets. It is especially useful where search quality depends on combining text and image understanding. GitHub shows roughly 5k stars, Python as the primary language, Apache-2.0 licensing, and repository activity updated Nov 27, 2025.
+> **Description:** Marqo describes itself as a unified embedding generation and search engine. The repository is aimed at teams that want vector search without stitching together as many moving parts themselves. In ecommerce terms, that translates into product similarity, visual discovery, multimodal retrieval, and semantic search over large catalogs. It sits between a low-level vector database and a full application stack, which can reduce engineering time for teams building AI-first discovery flows. GitHub metadata snapshot: 4,993 stars, primary language Python, Apache-2.0 license, last commit 2025-11-27.
 
 - **GitHub:** [github.com/marqo-ai/marqo](https://github.com/marqo-ai/marqo)
-- **Stars:** 5.0k ⭐
+- **Stars:** 4993 ⭐
 - **Language:** Python
 - **License:** Apache-2.0
 - **Last Commit:** 2025-11-27
-- **Category:** multimodal-search, catalog-enrichment
-- **Best for:** visual and semantic product discovery
+- **Category:** vector-search, multimodal-search, retrieval
+- **Best for:** quick-start semantic and visual product search
 
 ---
 
-#### [docTR](https://github.com/mindee/doctr)
-> **Description:** docTR is an OCR-focused deep learning library for document text recognition. Its README emphasizes text localization, word recognition, and end-to-end OCR models, along with a demo app and deployment-friendly packaging. For ecommerce teams, that is valuable for ingesting supplier PDFs, extracting attributes from invoices or catalogs, and turning semi-structured merchandising documents into machine-usable data. It is not a storefront tool on its own, but it solves an important catalog ingestion problem upstream of search and product information management. GitHub shows roughly 5.7k stars, Python as the main language, Apache-2.0 licensing, and visible GitHub release activity on Jul 9, 2025.
+#### [NVIDIA Merlin](https://github.com/NVIDIA-Merlin/Merlin)
+> **Description:** NVIDIA Merlin is an end-to-end GPU-accelerated recommender-system library that spans feature engineering, training, and production inference. The README breaks the project into components such as NVTabular, HugeCTR, Merlin Models, Transformers4Rec, and Merlin Systems, which together target large-scale recommendation pipelines. For ecommerce organizations with substantial event volume and GPU infrastructure, Merlin is one of the few open-source repos built specifically for industrial recommender workloads instead of only offline notebooks. GitHub metadata snapshot: 860 stars, primary language Python, Apache-2.0 license, last commit 2024-12-05.
 
-- **GitHub:** [github.com/mindee/doctr](https://github.com/mindee/doctr)
-- **Stars:** 5.7k ⭐
+- **GitHub:** [github.com/NVIDIA-Merlin/Merlin](https://github.com/NVIDIA-Merlin/Merlin)
+- **Stars:** 860 ⭐
 - **Language:** Python
 - **License:** Apache-2.0
-- **Last Commit:** 2025-07-09
-- **Category:** ocr, catalog-ingestion
-- **Best for:** extracting product data from documents
+- **Last Commit:** 2024-12-05
+- **Category:** recommender-systems, gpu, feature-engineering
+- **Best for:** high-scale GPU-accelerated recommendation pipelines
 
 ---
 
-#### [clip-retrieval](https://github.com/rom1504/clip-retrieval)
-> **Description:** clip-retrieval is built to compute CLIP embeddings and serve large-scale text-image retrieval. The README walks through inference, indexing, filtering, backend hosting, and a simple UI, making it possible to build semantic search over images and captions with relatively little glue code. For ecommerce, this is useful for "find visually similar products", image-led navigation, and multimodal browsing where product photos matter as much as keywords. It is more of a toolkit than a full application, but it is unusually practical. GitHub shows about 1.8k stars, Python as the main language, MIT licensing, and active GitHub repository history visible in 2025.
+#### [Meilisearch](https://github.com/meilisearch/meilisearch)
+> **Description:** Meilisearch is a lightning-fast search API that now highlights AI-powered hybrid search in its GitHub organization and repository metadata. The project has long been strong for typo tolerance, search-as-you-type, facets, and developer ergonomics, all of which are critical to ecommerce storefronts. Its newer hybrid-search positioning makes it relevant for teams combining classical textual relevance with vector and semantic retrieval. Licensing is mixed on GitHub, so teams should review the repository carefully before adopting it commercially. GitHub metadata snapshot: 55,370 stars, primary language Rust, mixed GitHub license signals, last commit 2026-01-14.
 
-- **GitHub:** [github.com/rom1504/clip-retrieval](https://github.com/rom1504/clip-retrieval)
-- **Stars:** 1.8k ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-01-01
-- **Category:** visual-search, embeddings
-- **Best for:** similar-image and multimodal product search
-
----
-
-#### [Label Studio](https://github.com/HumanSignal/label-studio)
-> **Description:** Label Studio is an open source data labeling and annotation platform that supports text, images, audio, video, and time series. The README highlights customizable interfaces, model-assisted pre-labeling, active learning, and API integration into existing pipelines. In ecommerce, that is useful for training product classifiers, moderation systems, attribute extractors, image tagging models, and support intent datasets. It is not an AI model itself, but it is a key piece of the open source AI workflow for teams creating proprietary retail datasets. GitHub shows roughly 25.5k to 25.9k stars, JavaScript as the dominant language, Apache-2.0 licensing, and repository activity updated Nov 17, 2025.
-
-- **GitHub:** [github.com/HumanSignal/label-studio](https://github.com/HumanSignal/label-studio)
-- **Stars:** 25.9k ⭐
-- **Language:** JavaScript
-- **License:** Apache-2.0
-- **Last Commit:** 2025-11-17
-- **Category:** data-labeling, training-data
-- **Best for:** creating labeled ecommerce datasets
+- **GitHub:** [github.com/meilisearch/meilisearch](https://github.com/meilisearch/meilisearch)
+- **Stars:** 55370 ⭐
+- **Language:** Rust
+- **License:** Mixed / GitHub shows MIT plus additional license files
+- **Last Commit:** 2026-01-14
+- **Category:** search-api, hybrid-search, storefront-search
+- **Best for:** developer-friendly site search with AI hybrid retrieval
 
 ---
 
-#### [Open Semantic Search](https://github.com/opensemanticsearch/open-semantic-search)
-> **Description:** Open Semantic Search is an open source semantic search and text analytics platform for searching, browsing, and analyzing large document collections. The organization README highlights ETL, document extraction, OCR, metadata management, and exploration tooling. For ecommerce operations, that can help with internal knowledge bases, vendor documents, manuals, return policies, marketplace feeds, or support content that needs semantic retrieval and document understanding. This category is a smaller fit for pure ecommerce than search or recommendation infrastructure, so it is also an honest edge case in the list. GitHub shows about 1.1k stars, Shell as the main language, AGPL-3.0 licensing, and active organization-level maintenance through 2025.
+### Product Feed, Catalog, and Merchandising AI
 
-- **GitHub:** [github.com/opensemanticsearch/open-semantic-search](https://github.com/opensemanticsearch/open-semantic-search)
-- **Stars:** 1.1k ⭐
-- **Language:** Shell
-- **License:** AGPL-3.0
-- **Last Commit:** 2025-01-01
-- **Category:** semantic-search, document-processing
-- **Best for:** internal knowledge and supplier document search
+#### [FeedGen](https://github.com/google-marketing-solutions/feedgen)
+> **Description:** FeedGen is one of the clearest ecommerce-specific AI repositories available on GitHub. Its README says it uses large language models to improve product titles, generate richer descriptions, and fill missing feed attributes for Google Merchant Center workflows. It is designed around shopping feed optimization rather than generic text generation, which makes the repository especially useful for catalog enrichment, SEO copy cleanup, and paid-shopping quality improvements. It also supports few-shot prompting so merchants can adapt outputs to their own product language. GitHub metadata snapshot: 241 stars, primary language TypeScript, Apache-2.0 plus additional repository license files, last commit 2025-11-16.
+
+- **GitHub:** [github.com/google-marketing-solutions/feedgen](https://github.com/google-marketing-solutions/feedgen)
+- **Stars:** 241 ⭐
+- **Language:** TypeScript
+- **License:** Apache-2.0 plus additional repository license files
+- **Last Commit:** 2025-11-16
+- **Category:** shopping-feed, catalog-enrichment, generative-ai
+- **Best for:** improving product titles, descriptions, and missing feed fields
 
 ---
 
-### Conversational Commerce and Support Automation
+#### [Image Inventory](https://github.com/google-marketing-solutions/image-inventory)
+> **Description:** Image Inventory is built to classify product images from a Google Merchant Center feed using multimodal prompts. The README focuses on customizable image classification at scale, structured outputs, BigQuery storage, and cloud orchestration. For ecommerce teams, that is useful for image QA, attribute extraction, creative auditing, or automatically tagging catalog photos for downstream search and merchandising. It is a narrow tool, but it is one of the few repos in this niche that directly addresses product-image workflows instead of generic computer vision demos. GitHub metadata snapshot: 5 stars, primary language Python, Apache-2.0 license, last commit 2025-11-16.
 
-#### [Rasa](https://github.com/RasaHQ/rasa)
-> **Description:** Rasa is an open source conversational AI framework for building reliable, scalable agents. GitHub describes it as suitable for text- and voice-based conversations with dialogue management, NLU, and production-minded orchestration. For ecommerce, Rasa fits customer support bots, order-status flows, return handling, product guidance, and layered automation where LLM flexibility needs to be constrained by business rules. It remains one of the strongest open source choices when conversational systems must be auditable and operationally controlled. GitHub shows about 21k stars, Python as the primary language, Apache-2.0 licensing, and repository activity updated Dec 18, 2025.
-
-- **GitHub:** [github.com/RasaHQ/rasa](https://github.com/RasaHQ/rasa)
-- **Stars:** 21.0k ⭐
+- **GitHub:** [github.com/google-marketing-solutions/image-inventory](https://github.com/google-marketing-solutions/image-inventory)
+- **Stars:** 5 ⭐
 - **Language:** Python
 - **License:** Apache-2.0
-- **Last Commit:** 2025-12-18
-- **Category:** conversational-ai, support-automation
-- **Best for:** rule-aware customer support agents
+- **Last Commit:** 2025-11-16
+- **Category:** product-images, classification, catalog-ops
+- **Best for:** automatic product-image labeling and audit pipelines
+
+---
+
+#### [FeedX](https://github.com/google-marketing-solutions/feedx)
+> **Description:** FeedX is an open-source framework for running A/B experiments on shopping feeds. Its README emphasizes randomized treatment and control groups, crossover design, CUPED adjustment, and outlier trimming so merchants can test changes to product titles, descriptions, or attributes with more statistical rigor. That is valuable because many catalog teams make feed changes blindly and then attribute performance shifts to guesswork. FeedX is less of a model library and more of an experimentation layer for AI-assisted merchandising changes. GitHub metadata snapshot: 56 stars, primary language Python, Apache-2.0 license, last commit 2025-11-16.
+
+- **GitHub:** [github.com/google-marketing-solutions/feedx](https://github.com/google-marketing-solutions/feedx)
+- **Stars:** 56 ⭐
+- **Language:** Python
+- **License:** Apache-2.0
+- **Last Commit:** 2025-11-16
+- **Category:** experimentation, feed-optimization, merchandising
+- **Best for:** measuring whether AI-generated feed changes actually improve results
+
+---
+
+#### [Merch Intel](https://github.com/google-marketing-solutions/merch-intel)
+> **Description:** Merch Intel is a dashboard project that turns Merchant Center market insights into pricing and product intelligence. The README highlights best-selling products, price benchmarks, sale-price suggestions, and competitive landscape views inside a shareable dashboard. It is not a generic analytics stack; it is directly shaped around merchandising and pricing teams that need faster decision support. That makes it a practical inclusion for ecommerce operators who want AI-adjacent decision tooling tied to merchant data instead of a broad BI framework. GitHub metadata snapshot: 9 stars, primary language Python, Apache-2.0 license, last commit 2025-11-16.
+
+- **GitHub:** [github.com/google-marketing-solutions/merch-intel](https://github.com/google-marketing-solutions/merch-intel)
+- **Stars:** 9 ⭐
+- **Language:** Python
+- **License:** Apache-2.0
+- **Last Commit:** 2025-11-16
+- **Category:** pricing, market-insights, merchandising
+- **Best for:** pricing and assortment decisions from Merchant Center signals
+
+---
+
+#### [Copycat](https://github.com/google-marketing-solutions/copycat)
+> **Description:** Copycat generates Google Search ad copy that matches an existing brand style. Its README explains that it learns from top-performing ads, brand guidelines, and keywords, then generates new headlines and descriptions while also evaluating memorization, style similarity, and keyword similarity. While it is focused on paid search rather than on-site catalog copy, it is still highly relevant to ecommerce acquisition teams trying to scale creative production without locking into proprietary ad-copy SaaS. GitHub metadata snapshot: 77 stars, primary language Python, Apache-2.0 license, last commit 2025-11-16.
+
+- **GitHub:** [github.com/google-marketing-solutions/copycat](https://github.com/google-marketing-solutions/copycat)
+- **Stars:** 77 ⭐
+- **Language:** Python
+- **License:** Apache-2.0
+- **Last Commit:** 2025-11-16
+- **Category:** ad-copy, acquisition, creative-automation
+- **Best for:** generating brand-consistent search ad copy for ecommerce campaigns
+
+---
+
+### Conversational Commerce and AI Support
+
+#### [Dify](https://github.com/langgenius/dify)
+> **Description:** Dify is a production-oriented platform for building agentic workflows and GPT-style applications. Its organization page and repository README position it as an LLMOps environment with visual design, context enhancement, observation, and deployment support. For ecommerce teams, that translates into faster creation of shopping assistants, returns copilots, agent handoff flows, or internal support tools backed by product and policy data. It is broader than a chatbot widget, which is useful if the support stack needs to grow into workflows and structured automation later. GitHub metadata snapshot: 125,330 stars, primary language Python, Dify Open Source License, last commit 2026-01-09.
+
+- **GitHub:** [github.com/langgenius/dify](https://github.com/langgenius/dify)
+- **Stars:** 125330 ⭐
+- **Language:** Python
+- **License:** Dify Open Source License
+- **Last Commit:** 2026-01-09
+- **Category:** agent-workflows, support-automation, rag
+- **Best for:** building complex customer-service and internal AI workflows
 
 ---
 
 #### [Flowise](https://github.com/FlowiseAI/Flowise)
-> **Description:** Flowise is a visual builder for AI agents and workflows. Its README focuses on self-hosting, multi-module architecture, deployment options, and visual composition of LLM and agent pipelines. In ecommerce, this is useful for quickly standing up internal copilots, support assistants, RAG workflows over policies or catalogs, and process automations that connect LLM steps to existing tools. It is best suited to teams that want a low-code orchestration layer but still need access to source code and self-hosting options. GitHub shows about 47.8k stars, TypeScript as the primary language, Apache-2.0 licensing, and repository activity updated Dec 29, 2025.
+> **Description:** Flowise focuses on visual AI-agent construction and self-hosted deployment. The README emphasizes drag-and-drop workflow building, multiple deployment targets, environment configuration, and support for RAG and agent use cases. That makes it practical for ecommerce operators who want to launch FAQ bots, lead qualification flows, post-purchase helpers, or sales-assistant experiments without starting from a blank codebase. It is especially attractive to mixed technical teams because it balances visual authoring with an open GitHub codebase. GitHub metadata snapshot: 47,770 stars, primary language TypeScript, Apache-2.0 license, last commit 2025-12-29.
 
 - **GitHub:** [github.com/FlowiseAI/Flowise](https://github.com/FlowiseAI/Flowise)
-- **Stars:** 47.8k ⭐
+- **Stars:** 47770 ⭐
 - **Language:** TypeScript
 - **License:** Apache-2.0
 - **Last Commit:** 2025-12-29
-- **Category:** ai-agents, workflow-builder
-- **Best for:** low-code ecommerce AI workflows
+- **Category:** visual-builder, chatbots, workflow-automation
+- **Best for:** quickly assembling self-hosted commerce assistants
 
 ---
 
-#### [Langflow](https://github.com/langflow-ai/langflow)
-> **Description:** Langflow is a visual platform for building and deploying AI agents and workflows with built-in API and MCP server capabilities. The README emphasizes visual authoring, source-level customization in Python, an interactive playground, observability integrations, and deployment as APIs or tools. For ecommerce teams, it can be used to prototype shopping assistants, support bots, internal ops copilots, and retrieval workflows tied to product or policy data. It is broader than a chatbot framework and especially useful when workflows need to graduate into reusable internal tools. GitHub shows roughly 142k to 143k stars, Python as the primary language, MIT licensing, and repository activity updated Jan 3, 2026.
+#### [Open WebUI](https://github.com/open-webui/open-webui)
+> **Description:** Open WebUI is a self-hosted AI interface that runs offline and supports multiple LLM backends, built-in retrieval, and extensibility. Its README positions it as a feature-rich deployment surface for private AI applications rather than just a demo UI. In ecommerce, that is useful when support agents, merchandisers, or operations teams need secure internal copilots connected to documents, policy content, or catalog knowledge without pushing everything into a hosted SaaS. Licensing is mixed in the repository, so procurement and legal review are important. GitHub metadata snapshot: 118,157 stars, primary language Svelte, mixed Open WebUI licensing, last commit 2025-12-16.
 
-- **GitHub:** [github.com/langflow-ai/langflow](https://github.com/langflow-ai/langflow)
-- **Stars:** 143k ⭐
+- **GitHub:** [github.com/open-webui/open-webui](https://github.com/open-webui/open-webui)
+- **Stars:** 118157 ⭐
+- **Language:** Svelte
+- **License:** Mixed / Open WebUI License and prior component licenses
+- **Last Commit:** 2025-12-16
+- **Category:** self-hosted-ai, internal-tools, rag
+- **Best for:** private agent workspaces for support and operations teams
+
+---
+
+#### [Lobe Chat](https://github.com/lobehub/lobe-chat)
+> **Description:** Lobe Chat is an open-source AI agent workspace with multi-provider support, knowledge-base features, plugins, and self-hosting paths. The repository README stresses modern UI, knowledge upload, multi-user management, and plugin-based extensibility. For ecommerce use, that makes it a strong candidate for branded support portals, internal knowledge assistants, or specialist agents for sales and operations teams. It is not narrowly optimized for commerce out of the box, but it gives teams a polished self-hosted interface without proprietary lock-in. GitHub metadata snapshot: 70,100 stars, primary language TypeScript, repository license view required on GitHub, latest visible GitHub activity 2025-12-04.
+
+- **GitHub:** [github.com/lobehub/lobe-chat](https://github.com/lobehub/lobe-chat)
+- **Stars:** 70100 ⭐
+- **Language:** TypeScript
+- **License:** View repository license on GitHub
+- **Last Commit:** 2025-12-04
+- **Category:** ai-workspace, knowledge-base, chat-ui
+- **Best for:** polished branded AI assistants with self-hosted deployment options
+
+---
+
+#### [RAGFlow](https://github.com/infiniflow/ragflow)
+> **Description:** RAGFlow is an open-source RAG engine that combines retrieval workflows with agent capabilities. The README highlights document understanding, pre-built agent templates, and a context layer meant for production AI systems. For ecommerce teams, it is useful when customer support or internal users need accurate answers grounded in policies, manuals, product specs, or returns rules rather than free-form model guesses. It is more infrastructure-heavy than a simple chatbot, but that is also why it fits more serious knowledge-backed commerce use cases. GitHub metadata snapshot: 71,400 stars, primary language Python, Apache-2.0 license, latest visible GitHub activity 2025-12-31.
+
+- **GitHub:** [github.com/infiniflow/ragflow](https://github.com/infiniflow/ragflow)
+- **Stars:** 71400 ⭐
 - **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2026-01-03
-- **Category:** ai-agents, visual-builder
-- **Best for:** prototyping and deploying ecommerce assistants
+- **License:** Apache-2.0
+- **Last Commit:** 2025-12-31
+- **Category:** rag, knowledge-management, support
+- **Best for:** grounding support agents on product and policy documents
 
 ---
 
-#### [ChatFAQ](https://github.com/ChatFAQ/ChatFAQ)
-> **Description:** ChatFAQ is an open source ecosystem for building conversational solutions with LLMs, RAG, agents, and finite-state logic. The README lists a backend, SDK, widget, admin dashboard, and infrastructure for retrieval and orchestration. That makes it directly relevant for storefront assistants, FAQ agents, order support, and embedded chat experiences where the frontend widget matters as much as the backend pipeline. It is smaller than Rasa or Langflow, but the project is opinionated around business-facing chat experiences. GitHub shows around 149 stars, Python as the primary language, MIT licensing, and recent commit activity visible in early 2025.
-
-- **GitHub:** [github.com/ChatFAQ/ChatFAQ](https://github.com/ChatFAQ/ChatFAQ)
-- **Stars:** 149 ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-01-01
-- **Category:** chat-widget, rag
-- **Best for:** embedded conversational commerce widgets
-
----
-
-#### [Libre Chat](https://github.com/vemonet/libre-chat)
-> **Description:** Libre Chat is a self-hosted chatbot web UI and API for open source LLMs. Its README highlights offline-capable deployment, YAML-based configuration, OpenAPI support, CPU-friendly operation, and optional document-based question answering. For ecommerce teams, that makes it suitable for internal support assistants, knowledge-base search, policy QA, or lightweight self-hosted chat experiences that do not depend on proprietary hosted models. It is earlier-stage than the larger orchestration projects, but the self-hosted simplicity is a real advantage in some environments. GitHub shows about 164 stars, Python as the primary language, MIT licensing, and recent visible repository activity in 2025.
-
-- **GitHub:** [github.com/vemonet/libre-chat](https://github.com/vemonet/libre-chat)
-- **Stars:** 164 ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-01-01
-- **Category:** self-hosted-chatbot, llm-ui
-- **Best for:** private self-hosted support chat
-
----
-
-### Forecasting and Demand Planning
+### Forecasting, Pricing, and Demand Planning
 
 #### [NeuralForecast](https://github.com/Nixtla/neuralforecast)
-> **Description:** NeuralForecast is a library of neural forecasting models built with usability and strong benchmarks in mind. The README emphasizes a broad set of architectures from RNNs to transformer-style models, support for exogenous variables, probabilistic forecasting, automatic model selection, and a familiar `.fit()` / `.predict()` interface. For ecommerce, it is a strong option for SKU-level demand forecasting, promotion-aware planning, and inventory-sensitive replenishment work where classical models are not enough. GitHub shows roughly 3.9k stars, Python as the primary language, Apache-2.0 licensing, and repository activity updated Jan 14, 2026.
+> **Description:** NeuralForecast is a large collection of neural forecasting models designed around usability, robustness, and production-oriented interfaces. The README lists everything from recurrent networks to transformer-style models, along with probabilistic forecasting, exogenous variables, automatic tuning, and sklearn-like APIs. For ecommerce planning teams, that makes it well suited to SKU-level demand forecasting, promotion forecasting, or inventory planning where many related time series must be modeled together. It is one of the strongest open-source forecasting repos currently active on GitHub. GitHub metadata snapshot: 3,923 stars, primary language Python, Apache-2.0 license, last commit 2026-01-14.
 
 - **GitHub:** [github.com/Nixtla/neuralforecast](https://github.com/Nixtla/neuralforecast)
-- **Stars:** 3.9k ⭐
+- **Stars:** 3923 ⭐
 - **Language:** Python
 - **License:** Apache-2.0
 - **Last Commit:** 2026-01-14
-- **Category:** forecasting, demand-planning
-- **Best for:** neural demand forecasting for products
+- **Category:** demand-forecasting, deep-learning, inventory
+- **Best for:** large-scale SKU and channel demand forecasting
+
+---
+
+#### [MLForecast](https://github.com/Nixtla/mlforecast)
+> **Description:** MLForecast is focused on scalable machine-learning time-series forecasting rather than deep neural architectures alone. Its README emphasizes efficient feature engineering, support for pandas, polars, Spark, Dask, and Ray, plus probabilistic forecasting and exogenous variables. That is highly relevant for ecommerce operators that want practical forecasting pipelines over many SKUs, stores, channels, or markets without adopting the heaviest deep-learning stack first. It is a good fit when planning teams want strong tabular and feature-based forecasting workflows. GitHub metadata snapshot: 1,141 stars, primary language Python, Apache-2.0 license, last commit 2026-01-12.
+
+- **GitHub:** [github.com/Nixtla/mlforecast](https://github.com/Nixtla/mlforecast)
+- **Stars:** 1141 ⭐
+- **Language:** Python
+- **License:** Apache-2.0
+- **Last Commit:** 2026-01-12
+- **Category:** time-series, feature-engineering, forecasting
+- **Best for:** scalable machine-learning forecasting over many product series
 
 ---
 
 #### [Darts](https://github.com/unit8co/darts)
-> **Description:** Darts is a user-friendly library for time series forecasting and anomaly detection. The README highlights a unified API across statistical and deep learning models, support for backtesting, multivariate series, covariates, probabilistic forecasting, and anomaly workflows. For ecommerce, it is a practical choice when teams need a broad forecasting toolbox for demand, traffic, conversion, returns, or stockout risk without committing to one modeling family too early. It is especially attractive for experimentation because the interfaces are consistent. GitHub shows about 9.3k stars, Python as the primary language, Apache-2.0 licensing, and repository activity updated Mar 27, 2026.
+> **Description:** Darts is a user-friendly forecasting and anomaly-detection library that unifies many classical and deep-learning models behind a common interface. The README stresses easy `fit()` and `predict()` usage, backtesting, multivariate support, probabilistic forecasting, and external covariates. That makes it practical for ecommerce teams that want to compare models quickly across sales, traffic, returns, or stock signals without rewriting the entire pipeline for every experiment. It is especially useful for teams that need both forecasting and anomaly detection in one stack. GitHub metadata snapshot: 9,060 stars, primary language Python, Apache-2.0 license, last commit 2025-11-27.
 
 - **GitHub:** [github.com/unit8co/darts](https://github.com/unit8co/darts)
-- **Stars:** 9.3k ⭐
+- **Stars:** 9060 ⭐
 - **Language:** Python
 - **License:** Apache-2.0
-- **Last Commit:** 2026-03-27
-- **Category:** forecasting, anomaly-detection
-- **Best for:** flexible retail time-series modeling
+- **Last Commit:** 2025-11-27
+- **Category:** forecasting, anomaly-detection, time-series
+- **Best for:** comparing many forecasting models with minimal glue code
 
 ---
 
-#### [Prophet](https://github.com/facebook/prophet)
-> **Description:** Prophet is a well-known forecasting library built for time series with strong seasonal effects, non-linear growth, and holidays. Its README emphasizes robustness to missing data, outliers, and trend shifts, all of which are common in ecommerce calendars affected by promotions, seasonality, and operational disruptions. Prophet is not the newest approach in this category, but it remains one of the fastest ways to establish a durable forecasting baseline for marketing, demand, and planning problems. GitHub shows about 18.7k stars, Python as the primary language, MIT licensing, and visible GitHub release activity through 2025.
+#### [PyTorch Forecasting](https://github.com/sktime/pytorch-forecasting)
+> **Description:** PyTorch Forecasting provides deep-learning forecasting architectures with a high-level API and production-minded defaults. The README calls out a dataset abstraction for messy real-world series, multiple neural architectures, interpretation capabilities, multi-horizon metrics, and Optuna-based tuning. Ecommerce teams can use it for medium- to large-scale planning problems where sequence models like Temporal Fusion Transformer are attractive, especially when promotions, holidays, or multiple covariates affect demand. It is more model-centric than business-workflow-centric, but technically strong. GitHub metadata snapshot: 4,682 stars, primary language Python, MIT license, last commit 2025-12-03.
 
-- **GitHub:** [github.com/facebook/prophet](https://github.com/facebook/prophet)
-- **Stars:** 18.7k ⭐
+- **GitHub:** [github.com/sktime/pytorch-forecasting](https://github.com/sktime/pytorch-forecasting)
+- **Stars:** 4682 ⭐
 - **Language:** Python
 - **License:** MIT
-- **Last Commit:** 2025-01-01
-- **Category:** forecasting, seasonality
-- **Best for:** fast baseline demand forecasting
+- **Last Commit:** 2025-12-03
+- **Category:** deep-learning, forecasting, temporal-fusion-transformer
+- **Best for:** advanced neural demand forecasting with PyTorch
 
 ---
 
-#### [NeuralProphet](https://github.com/ourownstory/neural_prophet)
-> **Description:** NeuralProphet extends the Prophet style of workflow with PyTorch-based neural components while keeping interpretability and iterative modeling in view. The README describes support for trend, seasonality, lagged regressors, future regressors, events, quantile regression, and human-in-the-loop refinement. For ecommerce, that is useful when teams need stronger forecasting flexibility than Prophet while still wanting understandable components for promotions, holidays, and exogenous business drivers. It is a practical bridge between classical and neural retail forecasting stacks. GitHub shows roughly 3k stars, Python as the primary language, MIT licensing, and the latest visible release on Jun 21, 2024.
+#### [Merlion](https://github.com/salesforce/Merlion)
+> **Description:** Merlion is a time-series intelligence library that combines forecasting, anomaly detection, change-point detection, benchmarking, and visualization. The README positions it as an end-to-end framework rather than a single-model package, with support for diverse models, post-processing rules, evaluation pipelines, and even a visual dashboard. That can be useful in ecommerce settings where teams need to forecast demand while also catching unusual traffic, pricing, or supply-chain events. It is broader than pure demand planning and therefore useful for operations analytics too. GitHub metadata snapshot: 4,500 stars, primary language Python, BSD-3-Clause license, latest visible GitHub activity 2025-12-31.
 
-- **GitHub:** [github.com/ourownstory/neural_prophet](https://github.com/ourownstory/neural_prophet)
-- **Stars:** 3.0k ⭐
+- **GitHub:** [github.com/salesforce/Merlion](https://github.com/salesforce/Merlion)
+- **Stars:** 4500 ⭐
 - **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2024-06-21
-- **Category:** forecasting, interpretable-ml
-- **Best for:** explainable demand models with neural components
+- **License:** BSD-3-Clause
+- **Last Commit:** 2025-12-31
+- **Category:** forecasting, anomaly-detection, operations
+- **Best for:** planning plus anomaly detection in ecommerce operations
 
 ---
 
-#### [GluonTS](https://github.com/awslabs/gluonts)
-> **Description:** GluonTS is a probabilistic time series modeling library with deep learning models built around forecasting. The README focuses on probabilistic forecasts, PyTorch and MXNet support, pretrained Chronos work, and a mature research-backed ecosystem. For ecommerce, that makes it relevant when demand planning requires uncertainty estimates rather than point forecasts alone, which is often the case for inventory buffers, replenishment, or marketplace volatility. GluonTS is more library-oriented than turnkey, but it is one of the stronger probabilistic forecasting foundations available on GitHub. GitHub shows about 5.1k stars, Python as the primary language, Apache-2.0 licensing, and latest visible GitHub release activity on Jun 27, 2025.
+#### [retail-demand-forecasting](https://github.com/tycerch/retail-demand-forecasting)
+> **Description:** This repository is much smaller than the major forecasting libraries above, but it is one of the few public GitHub repos in this research pass that directly uses an online retail dataset for demand forecasting. The README says it is a demo forecasting project based on anonymized online retail sales from a UK non-store retailer, with notebook-driven experimentation and TensorBoard logging. That makes it useful as a worked example for ecommerce analysts who want a more domain-specific starter project instead of a general-purpose library. GitHub metadata snapshot: 0 stars, primary language Jupyter Notebook, Apache-2.0 license, latest visible GitHub activity 2025-12-31.
 
-- **GitHub:** [github.com/awslabs/gluonts](https://github.com/awslabs/gluonts)
-- **Stars:** 5.1k ⭐
-- **Language:** Python
+- **GitHub:** [github.com/tycerch/retail-demand-forecasting](https://github.com/tycerch/retail-demand-forecasting)
+- **Stars:** 0 ⭐
+- **Language:** Jupyter Notebook
 - **License:** Apache-2.0
-- **Last Commit:** 2025-06-27
-- **Category:** probabilistic-forecasting, demand-planning
-- **Best for:** inventory planning with uncertainty estimates
+- **Last Commit:** 2025-12-31
+- **Category:** retail-forecasting, example-project, notebooks
+- **Best for:** analysts wanting a small ecommerce-specific demand forecasting example
 
 ---
 
 ## FAQ
 
-### What are the best open source AI tools for ecommerce in 2026?
-For most teams, the strongest starting set is `gorse` or `metarank` for ranking, `Meilisearch` or `Typesense` for search, `Qdrant` or `Vespa` for vector retrieval, `Rasa` or `Langflow` for conversational workflows, and `NeuralForecast` or `Darts` for demand planning.
+### What are the best open-source AI tools for ecommerce in 2026?
+For production recommendations and discovery, start with Gorse, Qdrant, Typesense, OpenSearch, and Marqo. For shopping-feed improvement, FeedGen and FeedX are among the strongest ecommerce-specific repos. For support assistants, Dify, Flowise, Open WebUI, and RAGFlow are the most practical self-hosted options in this list.
 
-### Are these really open source and hosted on GitHub?
-Yes. Every entry in this list links to a public `github.com` repository. Closed SaaS-only products were excluded. Some projects also sell managed hosting, but the repositories listed here are public and self-hostable.
+### Are there really many open-source AI tools built specifically for ecommerce?
+Not many. That is the main gap this research exposed. There are strong open-source AI components for ecommerce workflows, but the number of repositories built explicitly and only for ecommerce is still limited. Product-feed optimization is better covered than areas like dynamic pricing or merchant-focused AI CRM.
 
-### Which tools are best for product recommendation engines?
-`gorse`, `metarank`, `RecBole`, `recommenders-team/recommenders`, and `LensKit` are the clearest recommendation-focused repos in this list. `Vespa` and `Qdrant` also matter when recommendation is built on retrieval or vector similarity.
+### Which GitHub repos are best for AI product recommendations in ecommerce?
+Gorse is the cleanest production-ready recommendation engine here. Recommenders, LensKit, and NVIDIA Merlin are better when you want experimentation depth, custom modeling, or GPU-heavy pipelines. Qdrant and Marqo become important when recommendations rely on embeddings, content similarity, or multimodal retrieval.
 
-### Which open source AI tools help ecommerce search the most?
-`Meilisearch`, `Typesense`, `OpenSearch`, `Vespa`, and `Qdrant` are the main search stack choices here. The right pick depends on whether you need typo tolerance, distributed scale, hybrid search, or vector-heavy retrieval.
+### Which open-source repos help with ecommerce product search and semantic catalog discovery?
+Qdrant, Typesense, OpenSearch, Meilisearch, and Marqo are the core search-layer choices. Typesense is particularly good for fast storefront experiences, OpenSearch is strongest for broader enterprise search infrastructure, and Qdrant or Marqo are the better fit when vector similarity and semantic retrieval are central.
 
-### What is the best open source stack for conversational commerce?
-If you need high control and business rules, start with `Rasa`. If you want rapid workflow assembly, look at `Flowise` or `Langflow`. If you need embedded chat experiences with RAG, `ChatFAQ` and `Libre Chat` are worth testing.
+### Are there open-source AI tools for optimizing Google Shopping or Merchant Center feeds?
+Yes. FeedGen, FeedX, Image Inventory, Merch Intel, and Copycat are all public GitHub repositories with clear shopping, merchant, or advertising workflows. This is one of the few ecommerce AI subcategories with multiple relevant public repos.
 
-### Which repos are best for forecasting ecommerce demand?
-`NeuralForecast`, `Darts`, `Prophet`, `NeuralProphet`, and `GluonTS` cover most forecasting needs from fast baselines to probabilistic and neural approaches.
+### What is the best self-hosted AI stack for ecommerce support teams?
+If you want a visual builder, start with Flowise. If you want a larger application platform, use Dify. If you want a polished self-hosted interface, Open WebUI and Lobe Chat are strong choices. If grounding on documents and policies matters most, RAGFlow is a strong foundation.
 
-### Are there any category gaps in open source ecommerce AI on GitHub?
-Yes. Dynamic pricing optimization, returns fraud models, and end-to-end merchandising copilots have fewer mature GitHub-native repos than search, recommendation, and forecasting. Those gaps are real, and this list reflects that instead of padding with irrelevant tools.
+### Are there open-source AI pricing tools for ecommerce on GitHub?
+Not many strong standalone ones. Pricing is better represented here through adjacent repos such as Merch Intel and forecasting libraries rather than dedicated open-source dynamic-pricing engines. This remains a genuine ecosystem gap, not something this list tries to hide.
 
 ## GitHub Search Queries Used
 
 ```bash
-gh search repos "recommender ecommerce ai in:name,description,readme stars:>50"
-gh search repos "learning to rank ecommerce search recommendation stars:>50"
-gh search repos "open source product search vector database ecommerce stars:>100"
-gh search repos "multimodal search image retrieval product catalog stars:>50"
-gh search repos "open source chatbot rag ecommerce support stars:>50"
-gh search repos "time series forecasting retail demand stars:>100"
-gh search repos "ocr product catalog extraction stars:>50"
-gh search repos "data labeling annotation machine learning stars:>100"
+gh search repos 'recommender system ecommerce language:Go stars:>100' --limit 20
+gh search repos 'recommendation system language:Python stars:>50' --limit 20
+gh search repos 'vector search ecommerce semantic search stars:>100' --limit 20
+gh search repos 'shopping feed generative ai merchant center stars:>0' --limit 20
+gh search repos 'product image classification merchant center github' --limit 20
+gh search repos 'self-hosted rag chatbot open source stars:>100' --limit 20
+gh search repos 'agent workflow self-hosted llm stars:>500' --limit 20
+gh search repos 'retail demand forecasting language:Python stars:>0' --limit 20
+gh search repos 'time series forecasting inventory demand stars:>100' --limit 20
+gh search repos 'pricing merchandising market insights merchant center stars:>0' --limit 20
 ```
 
 ## Contributing
-Contributions are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
+Contributions are welcome, but this repository is intentionally strict:
 
-Submission requirements:
-- The tool must have a public `github.com` repository URL.
-- No proprietary SaaS-only products.
-- Include current GitHub stars, primary language, license, and recent activity date.
-- Explain the ecommerce use case clearly.
+- Every submission must link to a public `github.com` repository.
+- No proprietary SaaS products, closed APIs, or "GitHub mirror but commercial product only" listings.
+- New entries must be meaningfully useful for ecommerce workflows such as search, recommendations, feed optimization, support, or forecasting.
+- Please include stars, primary language, license, and recent GitHub activity when opening a pull request.
+- If a category is thin, document it as a gap instead of padding it with weak matches.
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide.
 
 ## License
 MIT License. See [LICENSE](./LICENSE).
