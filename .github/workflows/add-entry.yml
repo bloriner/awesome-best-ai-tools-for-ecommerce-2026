@@ -1,0 +1,61 @@
+name: Add list entry
+
+on:
+  workflow_dispatch:
+    inputs:
+      upstream:
+        description: Upstream repo to branch from (owner/name)
+        required: true
+      anchor:
+        description: Unique text on the line after which the entry will be inserted
+        required: true
+      entry:
+        description: Entry text to insert (use %%NL%% for line breaks)
+        required: true
+      branch:
+        description: New branch name for the change
+        required: true
+        default: add-entry
+      base:
+        description: Upstream branch to branch from
+        required: true
+        default: main
+
+permissions:
+  contents: write
+
+jobs:
+  add-entry:
+    runs-on: ubuntu-latest
+    env:
+      UPSTREAM: ${{ inputs.upstream }}
+      ANCHOR: ${{ inputs.anchor }}
+      ENTRY: ${{ inputs.entry }}
+      BRANCH: ${{ inputs.branch }}
+      BASE: ${{ inputs.base }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Insert entry and push branch
+        run: |
+          git fetch "https://github.com/$UPSTREAM.git" "$BASE"
+          git checkout -b "$BRANCH" FETCH_HEAD
+          python3 - <<'PYEOF'
+          import os, sys
+          anchor = os.environ["ANCHOR"]
+          entry = os.environ["ENTRY"].replace("%%NL%%", "\n")
+          text = open("README.md").read()
+          first = next((l for l in entry.split("\n") if l.strip()), "")
+          if first and first in text:
+              sys.exit("entry already present")
+          lines = text.split("\n")
+          matches = [i for i, l in enumerate(lines) if anchor in l]
+          if len(matches) != 1:
+              sys.exit(f"anchor matched {len(matches)} lines, expected exactly 1")
+          lines.insert(matches[0] + 1, entry)
+          open("README.md", "w").write("\n".join(lines))
+          PYEOF
+          git config user.name "bloriner"
+          git config user.email "bloriner@users.noreply.github.com"
+          git add README.md
+          git commit -m "Add Stall"
+          git push -u origin "$BRANCH"
