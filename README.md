@@ -286,6 +286,18 @@ Open source matters here because ecommerce teams need control over product data,
 - **Category:** rag, knowledge-management, support
 - **Best for:** grounding support agents on product and policy documents
 
+#### [Stall](https://github.com/bloriner/stall)
+> **Description:** Stall is agent-commerce infrastructure: an MCP storefront server that exposes any merchant catalog to AI agents through 7 MCP tools (search, product, cart, checkout, merchant). A listing firewall parses every product listing into a strict schema and scans it for prompt-injection attacks, while server-side spending guardrails enforce per-purchase, per-merchant, and daily caps at checkout. GitHub metadata snapshot: 0 stars, primary language Python, no declared license, last commit 2026-10-15.
+
+- **GitHub:** [github.com/bloriner/stall](https://github.com/bloriner/stall)
+- **Stars:** 0 ⭐
+- **Language:** Python
+- **License:** None specified
+- **Last Commit:** 2026-10-15
+- **Category:** agent-commerce, mcp, storefront
+- **Best for:** exposing product catalogs to AI shopping agents with spending guardrails
+
+
 ---
 
 ### Forecasting, Pricing, and Demand Planning
